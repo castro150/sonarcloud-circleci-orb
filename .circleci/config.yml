@@ -10,12 +10,7 @@ workflows:
           destination-orb-path: orb.yml
           workspace-path: orb.yml
           artifact-path: orb.yml
-      - orb-tools/publish-dev:
-          context: Publishing Orb
-          orb-name: syngenta-digital/sonarcloud
-          requires: [orb-tools/pack]
       - orb-tools/publish:
-          context: Publishing Orb
           orb-ref: syngenta-digital/sonarcloud@1.0.0
           attach-workspace: true
           requires: [orb-tools/pack]
