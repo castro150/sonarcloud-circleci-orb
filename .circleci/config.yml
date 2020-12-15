@@ -18,7 +18,7 @@ workflows:
           context: Publishing Orb
           orb-ref: syngenta-digital/sonarcloud@1.0.0
           attach-workspace: true
-          requires: [test-node, test-circleci-python]
+          requires: [orb-tools/pack]
           filters:
             branches:
               only: master
